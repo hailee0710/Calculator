@@ -120,35 +120,43 @@
         android:id="@+id/btn0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:text="0"
-        android:layout_below="@+id/btn2"
-        android:layout_toEndOf="@+id/btn1" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btn1"
+        android:layout_marginTop="27dp"
+        android:text="0" />
 
     <Button
         android:id="@+id/btnDivide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btn0"
-        android:layout_alignBottom="@+id/btn0"
-        android:layout_alignParentEnd="false"
+        android:layout_alignBaseline="@+id/btnClear"
+        android:layout_alignBottom="@+id/btnClear"
+        android:layout_alignParentEnd="true"
         android:text="/" />
 
     <Button
         android:id="@+id/btnResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btnDivide"
-        android:layout_alignBottom="@+id/btnDivide"
-        android:layout_toEndOf="@+id/btn0"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26dp"
         android:text="=" />
 
     <Button
         android:id="@+id/btnClear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btnResult"
-        android:layout_alignBottom="@+id/btnResult"
-        android:layout_alignParentEnd="true"
+        android:layout_alignBaseline="@+id/btn0"
+        android:layout_alignBottom="@+id/btn0"
+        android:layout_toStartOf="@+id/btnDivide"
         android:text="C" />
+
+    <Button
+        android:id="@+id/btnDot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnClear"
+        android:layout_toEndOf="@+id/btn0"
+        android:text="." />
 </RelativeLayout>
