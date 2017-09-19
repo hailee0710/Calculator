@@ -7,6 +7,14 @@
     android:paddingRight="16dp"
     android:orientation="vertical" >
 
+  <TextView
+      android:id="@+id/tvError"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/textView"
+      android:layout_centerHorizontal="true"
+      android:textColor="@android:color/holo_red_light" />
+=======
     <TextView
         android:id="@+id/textView"
         android:layout_width="500dp"
@@ -159,4 +167,5 @@
         android:layout_alignTop="@+id/btnClear"
         android:layout_toEndOf="@+id/btn0"
         android:text="." />
+>>>>>>> master
 </RelativeLayout>
