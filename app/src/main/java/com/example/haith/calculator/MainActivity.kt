@@ -14,10 +14,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var numa : Int? = 0
-        var numb = 0
+        var numa : Float = 0.0F
+        var numb : Float = 0.0F
         var function : String? = ""
-        var result : Int = 0
+        var result : Float? = 0.0F
         var v : CharSequence? = textView.text
 
 
@@ -83,6 +83,12 @@ class MainActivity : AppCompatActivity() {
             tvError.text = ""
         })
 
+        btnDot.setOnClickListener({
+            v = "" + v + btnDot.text + ""
+            textView.text = v
+            tvError.text = ""
+        })
+
         btnClear.setOnClickListener({
             v=""
             textView.text = ""
@@ -92,7 +98,7 @@ class MainActivity : AppCompatActivity() {
         btnAdd.setOnClickListener {
 
             if(textView.text != ""){
-                numa = textView.text.toString().toInt()
+                numa = textView.text.toString().toFloat()
                 function = "Add"
                 textView.text = ""
                 v=""
@@ -108,7 +114,7 @@ class MainActivity : AppCompatActivity() {
         btnMinus.setOnClickListener {
             tvError.text = ""
             if(textView.text != ""){
-                numa = textView.text.toString().toInt()
+                numa = textView.text.toString().toFloat()
                 function = "Minus"
                 textView.text = ""
                 v=""
@@ -124,7 +130,7 @@ class MainActivity : AppCompatActivity() {
         btnMul.setOnClickListener {
             tvError.text = ""
             if(textView.text != ""){
-                numa = textView.text.toString().toInt()
+                numa = textView.text.toString().toFloat()
                 function = "Multiply"
                 textView.text = ""
                 v=""
@@ -140,7 +146,7 @@ class MainActivity : AppCompatActivity() {
         btnDivide.setOnClickListener {
             tvError.text = ""
             if(textView.text != ""){
-                numa = textView.text.toString().toInt()
+                numa = textView.text.toString().toFloat()
                 function = "Divide"
                 textView.text = ""
                 v=""
@@ -155,7 +161,7 @@ class MainActivity : AppCompatActivity() {
         btnResult.setOnClickListener {
             tvError.text = ""
             if(textView.text != "" && textView.text != "0"){
-                numb = textView.text.toString().toInt()
+                numb = textView.text.toString().toFloat()
                 when(function){
                     "Add" -> result = numa + numb
                     "Minus" -> result = numa - numb
@@ -165,7 +171,7 @@ class MainActivity : AppCompatActivity() {
 
             }
             if(textView.text == "0"){
-                numb = textView.text.toString().toInt()
+                numb = textView.text.toString().toFloat()
                 when(function){
                     "Add" -> result = numa + numb
                     "Minus" -> result = numa - numb
@@ -182,6 +188,7 @@ class MainActivity : AppCompatActivity() {
             textView.text = result.toString()
             v=""
             function=""
+
 
 
         }

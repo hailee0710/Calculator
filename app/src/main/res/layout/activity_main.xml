@@ -7,6 +7,7 @@
     android:paddingRight="16dp"
     android:orientation="vertical" >
 
+
   <TextView
       android:id="@+id/tvError"
       android:layout_width="wrap_content"
@@ -137,9 +138,8 @@
         android:id="@+id/btnDivide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btnClear"
-        android:layout_alignBottom="@+id/btnClear"
-        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/btnClear"
+        android:layout_toEndOf="@+id/btnClear"
         android:text="/" />
 
     <Button
@@ -155,16 +155,15 @@
         android:id="@+id/btnClear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btn0"
-        android:layout_alignBottom="@+id/btn0"
-        android:layout_toStartOf="@+id/btnDivide"
+        android:layout_alignTop="@+id/btnDot"
+        android:layout_toEndOf="@+id/btnDot"
         android:text="C" />
 
     <Button
         android:id="@+id/btnDot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/btnClear"
+        android:layout_alignTop="@+id/btn0"
         android:layout_toEndOf="@+id/btn0"
         android:text="." />
 >>>>>>> master
